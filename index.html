@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tohfaa - Custom Gifts & Hampers</title>
+    <link rel="stylesheet" href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\style.css"> <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">
+                            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\RegistrationForm\image\logo png.png" alt="Tohfaa Logo" class="logo-image">
+                        </a>
+                    </div>
+                    <div id="navbar-placeholder"></div>
+            <script>
+                // Load the navbar
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error loading navbar:', error));
+            </script>
+                    <ul class="nav-links">
+                        <li><a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">Home</a></li>
+                        <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ProductListingPage.html">Shop</a></li>
+                        <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\Error Page.html">Know About Us</a></li>
+                        <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ContactUs Page.html">Contact Us</a></li>
+                    </ul>
+                    <div class="cart-login">
+                        <!-- Cart Icon -->
+                        <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                        <!-- Profile Icon -->
+                        <a href="#profile" class="profile-icon"><i class="fas fa-user"></i></a>
+                        <a href="#login" class="login-btn">Login</a>
+                    </div>
+                </div>
+            </nav>
+
+    <!-- Carousel Container -->
+    <div class="carousel">
+        <div class="carousel-slide" id="carouselSlide">
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\hero section 1.png" alt="Slide 1">
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\Tohfaa\image\hero section2.png" alt="Slide 2">
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\Tohfaa\image\hero section 3.png" alt="Slide 3">
+            <img src="slide4.jpg" alt="Slide 4">
+        </div>
+
+        <!-- Prev and Next Buttons -->
+        <button class="prev" id="prevBtn">&#10094;</button>
+        <button class="next" id="nextBtn">&#10095;</button>
+
+        <!-- Dots Navigation -->
+        <div class="dots" id="dots">
+            <div class="dot" data-slide="0"></div>
+            <div class="dot" data-slide="1"></div>
+            <div class="dot" data-slide="2"></div>
+            <div class="dot" data-slide="3"></div>
+        </div>
+    </div>
+
+    <div style="background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%); color: #fff; font-size: 18px; font-weight: bold; padding:  20px 20px ; white-space: nowrap; overflow: hidden; position: relative;">
+        <p style="position: absolute; width: 100%; animation: scroll-text 20s linear infinite; margin: 0;">
+          🎉 First Order Discount: Get <span style="color: #472F1A; font-size: 20px;">10% OFF</span> Now! 🎉    🎉 First Order Discount: Get <span style="color: #472F1A; font-size: 20px;">10% OFF</span> Now! 🎉     🎉 First Order Discount: Get <span style="color: #472F1A; font-size: 20px;">10% OFF</span> Now! 🎉
+        </p>
+        <style>
+          @keyframes scroll-text {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+          }
+        </style>
+      </div>
+
+    <section class="hero">
+        <div class="hero-text">
+          <h1>Gift Memories, Gift Art</h1>
+          <p>Explore our curated collection of customizable graphical illustrations for every occasion.</p>
+          <a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ProductListingPage.html" class="cta-btn-a">Shop Now</a>
+        </div>
+        <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\Hero Illustration 1.png" alt="Hero Illustration">
+      </section>
+
+    
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Explore Our Products</h2>
+        <div class="category-cards">
+            <div class="card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\Custom illustration.png" alt="Custom Illustrations">
+                <h3>Custom Illustrations</h3>
+                <p>Bring your favorite memories to life with personalized artwork.</p><br>
+                <a href="#" class="cta-btn">Explore</a>
+            </div>
+            <div class="card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\Custom Hamper.png" alt="Custom Hampers">
+                <h3>Custom Hampers</h3>
+                <p>Design a gift hamper as unique as the person receiving it.</p><br>
+                <a href="#" class="cta-btn">Explore</a>
+            </div>
+            <div class="card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\love retreat.png" alt="Love Retreat">
+                <h3>Love Retreat</h3>
+                <p>Celebrate love with our limited-edition hamper, perfect for anniversaries.</p><br>
+                <a href="#" class="cta-btn">Explore</a>
+            </div>
+        </div>
+    </section>
+    
+  
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-cards">
+            <div class="step-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\step1.png" alt="Step 1: Select">
+                <h3>Step 1: Select Your Product</h3>
+                <p>Choose from digital illustrations or custom hampers to get started.</p>
+            </div>
+            <div class="step-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\step 2.png" alt="Step 2: Customize">
+                <h3>Step 2: Customize Your Gift</h3>
+                <p>Personalize the gift with custom illustrations, messages, and more.</p>
+            </div>
+            <div class="step-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\step3.png" alt="Step 3: Deliver">
+                <h3>Step 3: We Deliver</h3>
+                <p>Sit back as we deliver your custom-made gifts right to your door.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\mug.png" alt="Custom Mug">
+                <h3>Custom Mug</h3>
+                <p>Perfect for your morning coffee. Add your favorite illustrations!</p>
+                <a href="#" class="cta-btn small">Shop Now</a>
+            </div>
+            <div class="product-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\Bouquet.png" alt="Custom T-Shirt">
+                <h3>Custom Bouquet</h3>
+                <p>Wear your memories with our high-quality custom-printed tees.</p>
+                <a href="#" class="cta-btn small">Shop Now</a>
+            </div>
+            <div class="product-card">
+                <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\images\illustration.png" alt="Framed Art">
+                <h3>Framed Art</h3>
+                <p>Beautifully framed custom illustrations to decorate your home.</p>
+                <a href="#" class="cta-btn small">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <p>"Tohfaa made my anniversary gift unforgettable. The custom illustration was stunning!"</p>
+                <h4>- Ananya S.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"The hamper was beautifully curated. Everything felt so personal and thoughtful!"</p>
+                <h4>- Raghav M.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Absolutely loved the custom artwork. It was the perfect gift for my friend."</p>
+                <h4>- Priya D.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <h2>Join Our Community</h2>
+        <p>Subscribe to get updates on new products and exclusive offers.</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email">
+            <button type="submit" class="cta-btn">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Tohfaa - All Rights Reserved</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/_tohfaa._">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Change navbar color based on background
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+            const scrollY = window.scrollY;
+
+            if (scrollY > heroHeight / 2) {
+                navbar.classList.add('navbar-light');
+                navbar.classList.remove('navbar-dark');
+            } else {
+                navbar.classList.add('navbar-dark');
+                navbar.classList.remove('navbar-light');
+            }
+        });
+         // Carousel Logic
+         const carouselSlide = document.getElementById('carouselSlide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide img');
+        const totalSlides = slides.length;
+
+        // Update Slide and Dot Navigation
+        function updateCarousel() {
+            // Calculate the translation for the slide
+            const translateX = -(currentIndex * 100);
+            carouselSlide.style.transform = `translateX(${translateX}vw)`;
+
+            // Update active dot
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+
+        // Next Button
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        // Prev Button
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+
+        // Dot Navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Swipe Gestures (For Mobile)
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselSlide.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselSlide.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            if (touchEndX < touchStartX) {
+                nextBtn.click();
+            }
+            if (touchEndX > touchStartX) {
+                prevBtn.click();
+            }
+        }
+    </script>
+    <script>
+        // Add loaded class to body to trigger the hero transition
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

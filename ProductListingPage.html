@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing - Tohfaa</title>
+    <link rel="stylesheet" href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\productlistingstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\RegistrationForm\image\logo png.png" alt="Tohfaa Logo" class="logo-image">
+                </a>
+            </div>
+            <div id="navbar-placeholder"></div>
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+            <ul class="nav-links">
+                <li><a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">Home</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ProductListingPage.html">Shop</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\Error Page.html">Know About Us</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ContactUs Page.html">Contact Us</a></li>
+            </ul>
+            <div class="cart-login">
+                <!-- Cart Icon -->
+                <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                <!-- Profile Icon -->
+                <a href="#profile" class="profile-icon"><i class="fas fa-user"></i></a>
+                <a href="#login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+    <section>
+    <div>
+        <br>
+        <br><br><br>
+    <h1>Our Products</h1>
+
+    <section class="filter-sort-section">
+        <div class="filters">
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="all">All Products</option>
+                <option value="frames">Frames</option>
+                <option value="mugs">Mugs</option>
+                <option value="bags">Bags</option>
+                <option value="hampers">Hampers</option>
+                <option value="other">Other Products</option>
+            </select>
+        </div>
+        <div class="sort">
+            <label for="sort-price">Sort by Price:</label>
+            <select id="sort-price" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <div class="product-grid">
+        <!-- Product Card Template -->
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\frame A5.png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Illustrated Frame (A5)</h3>
+            <p class="product-price">₹599.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()"">Customize </a></button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Repeat the above product card for more products -->
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\A4 Frame.png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Illustrated Frame (A4)</h3>
+            <p class="product-price">₹799.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\Product Detail Page.html">
+                    <button class="cta-btn">Add to Cart</button>
+                    </a>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\Mug .png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Illustrated Mug</h3>
+            <p class="product-price">₹549.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\wallet card.png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Wallet Card</h3>
+            <p class="product-price">₹250.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Add more product cards as needed -->
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\tote.png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Tote Bag</h3>
+            <p class="product-price">₹749.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Illustration T-Shirt</h3>
+            <p class="product-price">₹599.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Mini Birthday Hamper</h3>
+            <p class="product-price">₹699.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Mega Birthday Hamper</h3>
+            <p class="product-price">₹999.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Flower Bouquet</h3>
+            <p class="product-price">₹449.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\love retreat.png" alt="Product Image" class="product-image">
+            <h3 class="product-title">Love Retreat Hampers</h3>
+            <p class="product-price">₹849.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Customized Hampers</h3>
+            <p class="product-price">₹999.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="favourite-icon">♡</div>
+            <img src="https://via.placeholder.com/150" alt="Product Image" class="product-image">
+            <h3 class="product-title">Custom Phone Cover</h3>
+            <p class="product-price">₹499.00</p>
+            <div class="button-group">
+                <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                <button class="cta-btn">Add to Cart</button>
+            </div>
+        </div>
+        <!-- Additional rows for bottom alignment -->
+    </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Tohfaa - All Rights Reserved</p>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+    </footer>
+    <!-- JavaScript for Filter and Sort -->
+    <script>
+        // Array to store product details for filtering and sorting
+        const products = [
+            { id: 1, category: 'frames', price: 599, element: document.querySelector('.product-card:nth-child(1)') },
+            { id: 2, category: 'frames', price: 799, element: document.querySelector('.product-card:nth-child(2)') },
+            { id: 3, category: 'mugs', price: 549, element: document.querySelector('.product-card:nth-child(3)') },
+            { id: 4, category: 'other', price: 250, element: document.querySelector('.product-card:nth-child(4)') },
+            { id: 5, category: 'bags', price: 749, element: document.querySelector('.product-card:nth-child(5)') },
+            { id: 6, category: 'other', price: 599, element: document.querySelector('.product-card:nth-child(6)') },
+            // Add similar entries for all products
+        ];
+
+        // Function to filter products
+        function filterProducts() {
+            const category = document.getElementById('category-filter').value;
+            products.forEach(product => {
+                if (category === 'all' || product.category === category) {
+                    product.element.style.display = 'block';
+                } else {
+                    product.element.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to sort products by price
+        function sortProducts() {
+            const sortOption = document.getElementById('sort-price').value;
+            const grid = document.getElementById('product-grid');
+            const sortedProducts = [...products];
+
+            if (sortOption === 'low-to-high') {
+                sortedProducts.sort((a, b) => a.price - b.price);
+            } else if (sortOption === 'high-to-low') {
+                sortedProducts.sort((a, b) => b.price - a.price);
+            }
+
+            sortedProducts.forEach(product => grid.appendChild(product.element));
+        }
+
+        function navigateToCustomization() {
+    window.location.href = "file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/customizationPage.html";
+}
+        function navigateToProductDetail() {
+    window.location.href = "file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Tohfaa/Product%20Detail%20Page/Product%20Detail%20Page.html#";
+        }
+
+        </script>
+</body>
+</html>

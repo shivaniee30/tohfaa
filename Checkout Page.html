@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Process</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+    --primary-color: #b2896b;
+    --secondary-color: #5b3e25;
+    --background-color: #f7f3f0;
+    --text-color: #333;
+}
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f3f0;
+        }
+        .container {
+            padding: 50px 15%;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .step {
+            text-align: center;
+            color: #6d4c41;
+            font-weight: 500;
+            flex-grow: 1;
+        }
+        .step.active {
+            color: #b2896b;
+            font-weight: 600;
+        }
+        .step-indicator .circle {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #b2896b;
+            border-radius: 50%;
+            line-height: 26px;
+            text-align: center;
+            background-color: white;
+            margin-bottom: 5px;
+        }
+        .step.active .circle {
+            background-color: #b2896b;
+            color: white;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .btn-custom {
+            padding: 12px 28px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    color: #fff;
+    border:#5b3e25;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-flex;
+        }
+        .btn-custom:hover {
+            background-color: #8b6b52;
+            transform: scale(1.05);
+        }
+
+        .back-button {
+        position: fixed;
+        top: 80px; /* Adjust according to your navbar height */
+        left: 20px;
+        z-index: 999;
+    }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        background-color: #5b3e25;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-back i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .btn-back:hover {
+        background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+        border: 1px solid #472F1A;
+        color: #472F1A;
+    }
+
+        .form-control {
+            margin-bottom: 15px;
+        }
+        .product-image {
+            float: left;
+            margin-right: 15px;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+        .green-tick {
+            display: block;
+            width: 50%;
+            margin: 20px auto;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .thank-you {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="back-button">
+        <a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="step-indicator mb-4">
+            <div class="step active" id="step-billing">
+                <div class="circle">1</div>
+                Billing Info
+            </div>
+            <div class="step" id="step-shipping">
+                <div class="circle">2</div>
+                Shipping Info
+            </div>
+            <div class="step" id="step-payment">
+                <div class="circle">3</div>
+                Payment
+            </div>
+        </div>
+
+        <!-- Billing Info Section -->
+        <div class="section active" id="section-billing">
+            <h4>Billing Information</h4>
+            <div class="d-flex mb-3">
+                <img src="product-image.jpg" alt="Product Image" class="product-image">
+                <p>Product Name: <strong>Customized Gift Hamper</strong><br>
+                   Description: <em>Includes personalized items with choice of gifts</em></p>
+            </div>
+            <h5>Customer Information</h5>
+            <input type="text" class="form-control" placeholder="Full Name">
+            <input type="text" class="form-control" placeholder="Contact Number">
+            <input type="email" class="form-control" placeholder="Email Address">
+            <button class="btn btn-custom" onclick="nextStep('section-shipping')">Proceed to Shipping Info</button>
+        </div>
+
+        <!-- Shipping Info Section -->
+        <div class="section" id="section-shipping">
+            <h4>Shipping Information</h4>
+            <input type="text" class="form-control" placeholder="Full Address">
+            <input type="text" class="form-control" placeholder="House No. / Lane">
+            <input type="text" class="form-control" placeholder="Nearby Landmark">
+            <input type="text" class="form-control" placeholder="Pincode">
+            <input type="text" class="form-control" placeholder="State">
+            <h6>Address Type</h6>
+            <button class="btn btn-light">Home</button>
+            <button class="btn btn-light">Work</button>
+            <button class="btn btn-light" onclick="showAdditionalFields()">Others</button>
+            <div id="additional-fields" style="display: none;">
+                <input type="text" class="form-control" placeholder="Receiver's Name">
+                <input type="text" class="form-control" placeholder="Receiver's Contact">
+            </div>
+            <button class="btn btn-custom" onclick="nextStep('section-payment')">Proceed to Payment</button>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="section" id="section-payment">
+            <h4>Payment</h4>
+            <div>
+                <button class="btn btn-outline-dark mb-2">Google Pay</button>
+                <button class="btn btn-outline-dark mb-2">Phone Pay</button>
+                <button class="btn btn-outline-dark mb-2">Debit/Credit Card</button>
+                <button class="btn btn-outline-dark mb-2">Net Banking</button>
+                <div class="form-group mt-3">
+                    <input type="text" class="form-control" placeholder="Account Holder's Name">
+                    <input type="text" class="form-control" placeholder="Card Number">
+                    <input type="text" class="form-control" placeholder="CVV">
+                    <input type="text" class="form-control" placeholder="Expiry Date">
+                </div>
+                <button class="btn btn-custom mt-3" onclick="nextStep('section-confirmation')">Submit Payment</button>
+            </div>
+        </div>
+
+        <!-- Confirmation Section -->
+        <div class="section" id="section-confirmation">
+            <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\order confirmation.png" alt="Confirmation Tick" class="green-tick">
+            <div class="thank-you">
+                Order Confirmed!<br>Thank you for your purchase from Tohfaa.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(nextSectionId) {
+            // Hide all sections and show the active one
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.getElementById(nextSectionId).classList.add('active');
+    
+            // Update the step indicator
+            document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
+            const stepId = `step-${nextSectionId.split('-')[1]}`;
+            document.getElementById(stepId).classList.add('active');
+        }
+    
+        function showAdditionalFields() {
+            document.getElementById('additional-fields').style.display = 'block';
+        }
+
+        function validateAndNextStep(nextSectionId) {
+    const currentSection = document.querySelector('.section.active');
+    const inputs = currentSection.querySelectorAll('input');
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.value.trim()) {
+            input.classList.add('is-invalid'); // Use Bootstrap's invalid class
+            isValid = false;
+        } else {
+            input.classList.remove('is-invalid');
+        }
+    });
+
+    if (isValid) nextStep(nextSectionId);
+}
+
+    </script>
+    
+</body>
+</html>

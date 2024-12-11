@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Tohfaa\Product Detail Page\Product Detail Page Style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\RegistrationForm\image\logo png.png" alt="Tohfaa Logo" class="logo-image">
+                </a>
+            </div>
+            <div id="navbar-placeholder"></div>
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+            <ul class="nav-links">
+                <li><a href="file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/index.html">Home</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ProductListingPage.html">Shop</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\Error Page.html">Know About Us</a></li>
+                <li><a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Final Website\ContactUs Page.html">Contact Us</a></li>
+            </ul>
+            <div class="cart-login">
+                <!-- Cart Icon -->
+                <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+                <!-- Profile Icon -->
+                <a href="#profile" class="profile-icon"><i class="fas fa-user"></i></a>
+                <a href="#login" class="login-btn">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-info">
+                <div class="product-img">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\A4 Frame.png" alt="Product Image">
+                </div>
+                <div class="product-description">
+                    <h1>Custom Illustrated Frame (A4)</h1>
+                    <p class="price">₹799.00</p>
+                    <p class="description">This is a detailed description of the product. Highlight features, benefits, and unique selling points.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <button class="cta-btn">Add to Cart</button>
+                    <button class="cta-btn-outline" onclick="navigateToCustomization()">Customize</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Products Section -->
+    <section class="recommended-products">
+        <div class="container">
+            <h2>Recommended for You</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\frame A5.png" alt="Recommended Product">
+                    <h3>A5 Frame</h3>
+                    <p>₹499.00</p>
+                    <button class="cta-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\love retreat.png" alt="Recommended Product">
+                    <h3>Love Retreat</h3>
+                    <p>₹999.00</p>
+                    <button class="cta-btn">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Web Experience\chatgpt\ProductPage\images\tote.png" alt="Recommended Product">
+                    <h3>Tote Bag</h3>
+                    <p>₹499.00</p>
+                    <button class="cta-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+    function navigateToCustomization() {
+    window.location.href = "file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/customizationPage.html";
+}
+</script>
+     <!-- Footer -->
+     <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Tohfaa - All Rights Reserved</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/_tohfaa._">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

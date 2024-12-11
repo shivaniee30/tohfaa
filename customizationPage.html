@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Tohfaa Product</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3E5DA;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #F6DCC1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Consistent Section Padding */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Prominent Glassmorphism Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-image {
+    height: 50px; /* Adjust height to fit your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5b3e25;
+    text-decoration: underline;
+}
+
+.cart-login {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-icon {
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #ff6347;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color:#5b3e25;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    border: #472F1A;
+    border-style: dashed;
+    color: #472F1A;
+}
+
+
+
+.cta-btn {
+    padding: 12px 28px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    color: #fff;
+    border:#5b3e25;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-flex;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%);
+    border:2px #472F1A;
+    
+    color: #472F1A;
+}
+
+.back-button {
+        position: fixed;
+        top: 80px; /* Adjust according to your navbar height */
+        left: 20px;
+        z-index: 999;
+    }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        background-color: #5b3e25;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-back i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .btn-back:hover {
+        background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+        border: 1px solid #472F1A;
+        color: #472F1A;
+    }
+
+        /* Customization Container */
+        .customization-container {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            margin: 50px auto;
+            animation: fadeIn 1s;
+        }
+
+        .custom-title {
+            color: #6d4c41;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .form-check-label {
+            color: #5a3c33;
+            font-weight: 500;
+        }
+
+        /* Button Styles */
+        .btn-continue {
+            background: #6d4c41;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            border-radius: 30px;
+            margin-top: 20px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-continue:hover {
+            background: #5c3b30;
+            transform: scale(1.05);
+        }
+
+        .btn-continue:active {
+            transform: scale(0.95);
+        }
+
+        /* Image Preview */
+        .image-preview {
+            border: 1px dashed #b2896b;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #8b6b52;
+            background-color: #faf3ee;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="back-button">
+        <a href="javascript:history.back()" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="customization-container">
+            <h3 class="custom-title">Customize Your Product</h3>
+
+            <!-- Image Preview Section -->
+            <div class="image-preview">
+                <p>Preview Image</p>
+                <img src="https://via.placeholder.com/300x200" alt="Uploaded Image">
+            </div>
+
+            <form>
+                <!-- Options for Customization -->
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chocolates">
+                        <label class="form-check-label" for="chocolates">Add Chocolates</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="handwritten-letter">
+                        <label class="form-check-label" for="handwritten-letter">Add a Handwritten Letter</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gift-wrapping">
+                        <label class="form-check-label" for="gift-wrapping">Add Gift Wrapping</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="flowers">
+                        <label class="form-check-label" for="flowers">Add Flowers</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="polaroid">
+                        <label class="form-check-label" for="polaroid">Add Polaroids</label>
+                    </div>
+                </div>
+
+                <!-- Continue Button -->
+<button type="button" class="btn-continue" onclick="navigateToCustomization1()">Continue</button>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+    // Change navbar color based on background
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+            const scrollY = window.scrollY;
+
+            if (scrollY > heroHeight / 2) {
+                navbar.classList.add('navbar-light');
+                navbar.classList.remove('navbar-dark');
+            } else {
+                navbar.classList.add('navbar-dark');
+                navbar.classList.remove('navbar-light');
+            }
+        });
+         // Swipe Gestures (For Mobile)
+         let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselSlide.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselSlide.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        });
+
+        function handleGesture() {
+            if (touchEndX < touchStartX) {
+                nextBtn.click();
+            }
+            if (touchEndX > touchStartX) {
+                prevBtn.click();
+            }
+        }
+    </script>
+    <script>
+
+       
+        // Add loaded class to body to trigger the hero transition
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+
+        function navigateToCustomization1() {
+    window.location.href = "file:///C:/Users/Shivani/OneDrive/Desktop/ASSIGNMENTS/3rd%20year/semester%205/Final%20Website/Checkout%20Page.html";
+}
+
+
+    </script>
+        </script>
+</body>
+</html>

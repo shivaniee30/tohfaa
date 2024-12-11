@@ -1,0 +1,576 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3E5DA;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #F6DCC1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Consistent Section Padding */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Prominent Glassmorphism Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-image {
+    height: 50px; /* Adjust height to fit your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5b3e25;
+    text-decoration: underline;
+}
+
+.cart-login {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-icon {
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #ff6347;
+}
+
+.profile-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-icon {
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+    color: #ff6347;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color:#5b3e25;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    border: #472F1A;
+    border-style: dashed;
+    color: #472F1A;
+}
+
+  
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures equal space between text and image */
+    padding: 50px 60px;
+    background-color: #fff; /* Beige tone */
+}
+
+.hero-text {
+    max-width: 60%; /* Wider text area to align better with the image */
+    text-align: left;
+    color: #472F1A;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    color:  #5b3e25; /* Matching the purple tone in the image */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #5b3e25;
+}
+
+.hero img {
+    max-width: 30%; /* Smaller image size to match the layout */
+    height: auto;
+    object-fit: contain;
+    margin-left: 20px; /* Adds spacing between the text and the image */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero img {
+        max-width: 80%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+
+.cta-btn {
+    padding: 12px 28px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    color: #fff;
+    border:#5b3e25;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-flex;
+}
+
+.cta-btn-a {
+    padding: 12px 28px;
+    background: #5b3e25;
+    color: #fff;
+    border:2px linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    display: inline-flex;
+}
+
+.cta-btn-a:hover {
+    background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%);
+    border:2px #472F1A;
+    
+    color: #472F1A;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%);
+    border:2px #472F1A;
+    
+    color: #472F1A;
+}
+
+
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Carousel Slides */
+.carousel-slide {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Slide Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+    z-index: 10;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Navigation Dots */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ff7043;
+}
+
+/* Carousel Animation */
+.carousel-slide {
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Full screen on smaller devices */
+@media (max-width: 768px) {
+    .prev, .next {
+        font-size: 1.5rem;
+    }
+}
+
+
+.cta-btn:hover {
+    background-color: #ff8265;
+}
+
+.cta-btn.small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Category Cards */
+.categories {
+    background-color: #EFDCCD;
+}
+
+.category-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card p {
+    padding: 0 10px 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* How It Works Cards */
+.how-it-works {
+    background-color: #fff;
+}
+
+.steps-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.step-card {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 12px;
+}
+
+.step-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.step-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.step-card p {
+    color: #666;
+}
+
+/* Featured Products Grid */
+.featured-products {
+    background-color: #EFDCCD;
+}
+
+.product-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    padding: 20px 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.product-card p {
+    padding: 0 10px 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Social Desk Section */
+#social-desk {
+    padding: 40px 0;
+    text-align: center;
+}
+.video-card {
+    width: 320px; /* Adjust card width */
+    padding: 20px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #472F1A; /* Dark brown text */
+}
+
+.video-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Testimonial Section */
+.testimonials {
+    background-color: #fff;
+}
+
+.testimonial-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.testimonial-card {
+    width: 300px;
+    background-color: #f4f4f4;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 12px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial-card h4 {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Newsletter Signup */
+.newsletter {
+    padding: 60px 20px;
+    background-color: #5b3e25;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 50px;
+}
+
+.newsletter button {
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #5b3e25;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: #CCAC8F;
+}

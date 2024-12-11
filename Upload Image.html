@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Your Image</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+
+        /* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3E5DA;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #F6DCC1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Prominent Glassmorphism Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-image {
+    height: 50px; /* Adjust height to fit your design */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.nav-links a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5b3e25;
+    text-decoration: underline;
+}
+
+.cart-login {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-icon {
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #ff6347;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color:#5b3e25;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    border: 2px #472F1A;
+}
+
+.cta-btn {
+    padding: 10px 20px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    color: #fff;
+    border: 2px solid transparent; /* Default transparent border */
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s, border 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.cta-btn:hover {
+    background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%);
+    border: 2px solid #472F1A; /* Border appears on hover */
+    color: #472F1A;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cta-btn:active {
+    transform: scale(0.95); /* Click effect */
+}
+
+
+        .upload-container {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            margin: auto;
+            animation: fadeIn 1s;
+            align-items: center;
+        }
+
+        .upload-title {
+            color: #6d4c41;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+       
+
+.upload-options-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Add space between buttons */
+    margin-bottom: 5px;
+}
+
+.upload-options-container button {
+    flex: 1; /* Make buttons equal in size */
+    max-width: 250px; /* Optional: limit button width */
+}
+
+.upload-container {
+    text-align: center; /* Center content in the container */
+}
+
+
+        .btn-upload, .btn-proceed {
+            padding: 10px 20px;
+    background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+    color: #fff;
+    border: #5b3e25;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    display: center;
+    align-items: center;
+    justify-content: center;
+        }
+
+        .btn-upload:hover, .btn-proceed:hover {
+            background: linear-gradient(281deg, #b68f6c 0%, #a0774a 100%);
+    border: 2px solid #472F1A; /* Border appears on hover */
+    color: #472F1A;
+    transform: scale(1.05); /* Slight zoom effect */   
+        }
+
+        .btn-upload:active, .btn-proceed:active {
+            transform: scale(0.95);
+        }
+
+        .btn-proceed {
+            background: #6d4c41;
+            display: none; /* Initially hidden */
+        }
+
+        .btn-proceed:hover {
+            background: #5c3b30;
+            color: #ffffff;
+        }
+
+        .upload-options {
+            margin-bottom: 20px;
+        }
+
+        .icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        #imagePreview {
+            display: none;
+            text-align: center;
+            margin-bottom: 20px;
+            background: #f7f3f0;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e0d6cf;
+        }
+
+        #previewImg {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .upload-container {
+                padding: 30px;
+            }
+
+            .upload-title {
+                font-size: 22px;
+            }
+
+            .btn-upload, .btn-proceed {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+    
+        .main-content {
+    flex: 1; /* Allow the main content to grow and push the footer */
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    background-color: #F3E5DA; /* Matches body background color */
+}
+
+        /* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixes the footer to the bottom */
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 15px;
+    font-weight: 600;
+}
+
+.social-links a:hover {
+    color: #CCAC8F;
+}
+
+.back-button {
+        position: fixed;
+        top: 80px; /* Adjust according to your navbar height */
+        left: 20px;
+        z-index: 999;
+    }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        background-color: #5b3e25;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-back i {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .btn-back:hover {
+        background: linear-gradient(281deg, #CCAC8F 0%, #F6DCC1 100%);
+        border: 1px solid #472F1A;
+        color: #472F1A;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+    
+    <br>
+    <br>
+    
+    <div class="back-button">
+        <a href="javascript:history.back()" class="btn-back">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+    </div>
+    <div class="upload-container">
+        <div id="imagePreview">
+            <p class="text-center" style="color: #8b6b52; font-weight: 500;">Image Preview</p>
+            <img id="previewImg" class="img-fluid rounded" alt="Image Preview">
+        </div>
+    
+        <h3 class="upload-title text-center">Upload Your Image</h3>
+    
+        <!-- Flex container for "Upload" and "Take Photo" buttons -->
+        <div class="upload-options-container">
+            <button class="btn btn-upload" onclick="document.getElementById('uploadGallery').click()">
+                <span class="icon">📁</span> Upload from Gallery
+            </button>
+            <input type="file" id="uploadGallery" accept="image/*" style="display: none;" onchange="showImagePreview(event)">
+    
+            <button class="btn btn-upload" onclick="openCamera()">
+                <span class="icon">📷</span> Take Photo from Camera
+            </button>
+        </div>
+    
+        <!-- Proceed button below -->
+        <a href="C:\Users\Shivani\OneDrive\Desktop\ASSIGNMENTS\3rd year\semester 5\Tohfaa\Checkout Page.html" id="proceedButton" class="btn btn-proceed">Proceed to Checkout</a>
+    </div>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showImagePreview(event) {
+            const imagePreview = document.getElementById('imagePreview');
+            const previewImg = document.getElementById('previewImg');
+            const proceedButton = document.getElementById('proceedButton');
+
+            previewImg.src = URL.createObjectURL(event.target.files[0]);
+            imagePreview.style.display = 'block';
+            proceedButton.style.display = 'block';
+        }
+
+        function openCamera() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            input.capture = 'camera';
+            input.style.display = 'none';
+            input.onchange = (event) => showImagePreview(event);
+            document.body.appendChild(input);
+            input.click();
+        }
+    </script>
+</body>
+</html>
